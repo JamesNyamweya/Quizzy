@@ -6,21 +6,29 @@ function Quizpage({ selectedSubject, userName}) {
   const [questions, setquestions] = useState([]);
   const [userAnswers, setUserAnswers] = useState([]);
   const [results, setResults] = useState(false);
-  const handleSubmit = () => {
-    console.log(userAnswers);
-    setResults(true);
-  };
+    // const selectedSubject = "Math";
+    // const userName= "Arif"
+const handleSubmit = () => {
+  console.log(userAnswers);
+  setResults(true);
+  console.log("Results state:", results); 
+};
 
   const handleAnswerChange = (index, answer) => {
-    const updatedAnswers = [...userAnswers];
+      const updatedAnswers = [...userAnswers];
+      console.log(updatedAnswers)
     updatedAnswers[index] = answer;
-    setUserAnswers(updatedAnswers);
+      setUserAnswers(updatedAnswers);
+        console.log(userAnswers);
   };
-  useEffect(() => {
-    fetch(`http://localhost:3000/questions/${selectedSubject}`)
-      .then((res) => res.json())
-      .then((data) => setquestions(data));
-  }, [selectedSubject]);
+useEffect(() => {
+  fetch(`http://localhost:3000/questions`) // Fetch all questions
+    .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        setquestions(data[selectedSubject]); // Set only the selected subject's questions
+    });
+}, [selectedSubject]);
 
   return (
     <div>
@@ -28,7 +36,7 @@ function Quizpage({ selectedSubject, userName}) {
       {questions.map((question, index) => (
         <div key={question.id}>
           <p>
-            {index}.{question.text}
+            {index + 1}.{question.text}
           </p>
           {question.options.map((option) => (
             <div key={option}>
@@ -43,8 +51,14 @@ function Quizpage({ selectedSubject, userName}) {
           ))}
         </div>
       ))}
-      <button onClick={() => handleSubmit}>Submit Quiz</button>{" "}
-          {results && <ResultComponent userAnswers={userAnswers} subject={selectedSubject} userName={userName} />}
+      <button onClick={handleSubmit}>Submit Quiz</button>{" "}
+      {results && (
+        <ResultComponent
+          userAnswers={userAnswers}
+          subject={selectedSubject}
+          userName={userName}
+        />
+      )}
     </div>
   );
 }
