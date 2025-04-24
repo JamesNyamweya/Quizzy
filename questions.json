@@ -1,0 +1,366 @@
+{
+  "questions": {
+    "Math":[
+
+    {
+      "id": 1,
+      "subject": "Math",
+      "text": "What is 5 + 3?",
+      "options": ["6", "7", "8", "9"],
+      "correctAnswer": "8"
+    },
+    {
+      "id": 2,
+      "subject": "Math",
+      "text": "What is the square root of 16?",
+      "options": ["3", "4", "5", "6"],
+      "correctAnswer": "4"
+    },
+    {
+      "id": 3,
+      "subject": "Math",
+      "text": "Solve for x: 2x = 10.",
+      "options": ["3", "5", "7", "10"],
+      "correctAnswer": "5"
+    },
+    {
+      "id": 4,
+      "subject": "Math",
+      "text": "What is 7 x 6?",
+      "options": ["36", "42", "48", "52"],
+      "correctAnswer": "42"
+    },
+    {
+      "id": 5,
+      "subject": "Math",
+      "text": "What is 12 divided by 4?",
+      "options": ["2", "3", "4", "6"],
+      "correctAnswer": "3"
+    },
+    {
+      "id": 6,
+      "subject": "Math",
+      "text": "What is the perimeter of a square with side length 5?",
+      "options": ["10", "20", "15", "25"],
+      "correctAnswer": "20"
+    },
+    {
+      "id": 7,
+      "subject": "Math",
+      "text": "What is the value of π (approximately)?",
+      "options": ["2.14", "3.14", "4.14", "5.14"],
+      "correctAnswer": "3.14"
+    },
+    {
+      "id": 8,
+      "subject": "Math",
+      "text": "What is the derivative of x²?",
+      "options": ["x", "2x", "x²", "1"],
+      "correctAnswer": "2x"
+    },
+    {
+      "id": 9,
+      "subject": "Math",
+      "text": "What is 9²?",
+      "options": ["81", "90", "72", "99"],
+      "correctAnswer": "81"
+    },
+    {
+      "id": 10,
+      "subject": "Math",
+      "text": "What is the factorial of 5?",
+      "options": ["20", "60", "120", "150"],
+      "correctAnswer": "120"
+    }
+    ],
+    "Physics": [
+    {
+      "id": 11,
+      "subject": "Physics",
+      "text": "What is the speed of light?",
+      "options": ["3 x 10^8 m/s", "3 x 10^6 m/s", "3 x 10^5 m/s", "3 x 10^3 m/s"],
+      "correctAnswer": "3 x 10^8 m/s"
+    },
+    {
+      "id": 12,
+      "subject": "Physics",
+      "text": "Which law is also known as F = ma?",
+      "options": ["Newton's First Law", "Newton's Second Law", "Newton's Third Law", "Law of Conservation"],
+      "correctAnswer": "Newton's Second Law"
+    },
+    {
+      "id": 13,
+      "subject": "Physics",
+      "text": "What is the unit of force?",
+      "options": ["Newton", "Joule", "Watt", "Pascal"],
+      "correctAnswer": "Newton"
+    },
+    {
+      "id": 14,
+      "subject": "Physics",
+      "text": "What is the SI unit of energy?",
+      "options": ["Joule", "Newton", "Kilogram", "Watt"],
+      "correctAnswer": "Joule"
+    },
+    {
+      "id": 15,
+      "subject": "Physics",
+      "text": "Which phenomenon explains the bending of light?",
+      "options": ["Reflection", "Refraction", "Diffraction", "Interference"],
+      "correctAnswer": "Refraction"
+    },
+    {
+      "id": 16,
+      "subject": "Physics",
+      "text": "What is the formula for kinetic energy?",
+      "options": ["1/2 mv²", "mv", "mgh", "ma"],
+      "correctAnswer": "1/2 mv²"
+    },
+    {
+      "id": 17,
+      "subject": "Physics",
+      "text": "Who is known as the father of physics?",
+      "options": ["Newton", "Einstein", "Galileo", "Maxwell"],
+      "correctAnswer": "Galileo"
+    },
+    {
+      "id": 18,
+      "subject": "Physics",
+      "text": "Which particle is negatively charged?",
+      "options": ["Electron", "Proton", "Neutron", "Photon"],
+      "correctAnswer": "Electron"
+    },
+    {
+      "id": 19,
+      "subject": "Physics",
+      "text": "What is the resistance of a conductor measured in?",
+      "options": ["Ohms", "Amperes", "Volts", "Watts"],
+      "correctAnswer": "Ohms"
+    },
+    {
+      "id": 20,
+      "subject": "Physics",
+      "text": "What is the acceleration due to gravity on Earth?",
+      "options": ["9.8 m/s²", "10 m/s²", "8.9 m/s²", "11 m/s²"],
+      "correctAnswer": "9.8 m/s²"
+    }
+],
+"Chemistry" : [
+    {
+      "id": 21,
+      "subject": "Chemistry",
+      "text": "What is the chemical formula for water?",
+      "options": ["H2O", "CO2", "NaCl", "O2"],
+      "correctAnswer": "H2O"
+    },
+    {
+      "id": 22,
+      "subject": "Chemistry",
+      "text": "Which element has the symbol 'Fe'?",
+      "options": ["Iron", "Fluorine", "Lead", "Zinc"],
+      "correctAnswer": "Iron"
+    },
+    {
+      "id": 23,
+      "subject": "Chemistry",
+      "text": "What is the pH level of pure water?",
+      "options": ["5", "7", "9", "11"],
+      "correctAnswer": "7"
+    },
+    {
+      "id": 24,
+      "subject": "Chemistry",
+      "text": "Which gas is released during photosynthesis?",
+      "options": ["Carbon Dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+      "correctAnswer": "Oxygen"
+    },
+    {
+      "id": 25,
+      "subject": "Chemistry",
+      "text": "What is the chemical formula for table salt?",
+      "options": ["NaCl", "KCl", "CaCl2", "HCl"],
+      "correctAnswer": "NaCl"
+    },
+    {
+      "id": 26,
+      "subject": "Chemistry",
+      "text": "Which element is a noble gas?",
+      "options": ["Helium", "Oxygen", "Nitrogen", "Chlorine"],
+      "correctAnswer": "Helium"
+    },
+    {
+      "id": 27,
+      "subject": "Chemistry",
+      "text": "What is the molecular mass of CO2?",
+      "options": ["44", "28", "60", "16"],
+      "correctAnswer": "44"
+    },
+    {
+      "id": 28,
+      "subject": "Chemistry",
+      "text": "What is the atomic number of carbon?",
+      "options": ["6", "12", "8", "14"],
+      "correctAnswer": "6"
+    },
+    {
+      "id": 29,
+      "subject": "Chemistry",
+      "text": "Which acid is found in vinegar?",
+      "options": ["Acetic Acid", "Citric Acid", "Sulfuric Acid", "Hydrochloric Acid"],
+      "correctAnswer": "Acetic Acid"
+    },
+    {
+      "id": 30,
+      "subject": "Chemistry",
+      "text": "Which element has the highest atomic number?",
+      "options": ["Uranium", "Oganesson", "Plutonium", "Radon"],
+      "correctAnswer": "Oganesson"
+    }
+],
+"Biology": [
+
+    {
+      "id": 31,
+      "subject": "Biology",
+      "text": "What is the powerhouse of the cell?",
+      "options": ["Nucleus", "Mitochondria", "Ribosome", "Endoplasmic Reticulum"],
+      "correctAnswer": "Mitochondria"
+    },
+    {
+      "id": 32,
+      "subject": "Biology",
+      "text": "Which organ is responsible for pumping blood?",
+      "options": ["Brain", "Heart", "Lungs", "Liver"],
+      "correctAnswer": "Heart"
+    },
+    {
+      "id": 33,
+      "subject": "Biology",
+      "text": "What is the basic unit of life?",
+      "options": ["Cell", "Tissue", "Organ", "Organism"],
+      "correctAnswer": "Cell"
+    },
+    {
+      "id": 34,
+      "subject": "Biology",
+      "text": "What is the process by which plants make their own food?",
+      "options": ["Photosynthesis", "Respiration", "Digestion", "Fermentation"],
+      "correctAnswer": "Photosynthesis"
+    },
+    {
+      "id": 35,
+      "subject": "Biology",
+      "text": "Which blood cells help in fighting infections?",
+      "options": ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
+      "correctAnswer": "White blood cells"
+    },
+    {
+      "id": 36,
+      "subject": "Biology",
+      "text": "What is the function of the liver?",
+      "options": ["Pumping blood", "Producing bile", "Filtering oxygen", "Absorbing nutrients"],
+      "correctAnswer": "Producing bile"
+    },
+    {
+      "id": 37,
+      "subject": "Biology",
+      "text": "Which part of the plant conducts photosynthesis?",
+      "options": ["Root", "Stem", "Leaf", "Flower"],
+      "correctAnswer": "Leaf"
+    },
+    {
+      "id": 38,
+      "subject": "Biology",
+      "text": "What carries genetic information?",
+      "options": ["Protein", "DNA", "RNA", "Lipid"],
+      "correctAnswer": "DNA"
+    },
+    {
+      "id": 39,
+      "subject": "Biology",
+      "text": "What is the largest organ in the human body?",
+      "options": ["Heart", "Liver", "Skin", "Lungs"],
+      "correctAnswer": "Skin"
+    },
+    {
+      "id": 40,
+      "subject": "Biology",
+      "text": "What type of blood vessels carry blood away from the heart?",
+      "options": ["Arteries", "Veins", "Capillaries", "Lymphatics"],
+      "correctAnswer": "Arteries"
+    }
+],
+"Geography":[
+    {
+      "id": 41,
+      "subject": "Geography",
+      "text": "Which is the largest continent?",
+      "options": ["Africa", "Asia", "Europe", "Antarctica"],
+      "correctAnswer": "Asia"
+    },
+    {
+      "id": 42,
+      "subject": "Geography",
+      "text": "What is the capital city of Kenya?",
+      "options": ["Nairobi", "Mombasa", "Kisumu", "Eldoret"],
+      "correctAnswer": "Nairobi"
+    },
+    {
+      "id": 43,
+      "subject": "Geography",
+      "text": "Which river is the longest in the world?",
+      "options": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+      "correctAnswer": "Nile"
+    },
+    {
+      "id": 44,
+      "subject": "Geography",
+      "text": "Which ocean is the largest?",
+      "options": ["Atlantic", "Indian", "Pacific", "Arctic"],
+      "correctAnswer": "Pacific"
+    },
+    {
+      "id": 45,
+      "subject": "Geography",
+      "text": "What is the hottest desert in the world?",
+      "options": ["Sahara", "Arabian", "Gobi", "Atacama"],
+      "correctAnswer": "Sahara"
+    },
+    {
+      "id": 46,
+      "subject": "Geography",
+      "text": "Which mountain is the tallest in the world?",
+      "options": ["K2", "Mount Everest", "Kilimanjaro", "Denali"],
+      "correctAnswer": "Mount Everest"
+    },
+    {
+      "id": 47,
+      "subject": "Geography",
+      "text": "What is the smallest country in the world?",
+      "options": ["Malta", "Monaco", "Vatican City", "San Marino"],
+      "correctAnswer": "Vatican City"
+    },
+    {
+      "id": 48,
+      "subject": "Geography",
+      "text": "Which line divides the Earth into Northern and Southern Hemispheres?",
+      "options": ["Prime Meridian", "Equator", "Tropic of Cancer", "Tropic of Capricorn"],
+      "correctAnswer": "Equator"
+    },
+    {
+      "id": 49,
+      "subject": "Geography",
+      "text": "What is the Earth's largest island?",
+      "options": ["Greenland", "Australia", "Borneo", "Madagascar"],
+      "correctAnswer": "Greenland"
+    },
+    {
+      "id": 50,
+      "subject": "Geography",
+      "text": "What is the capital of Japan?",
+      "options": ["Tokyo", "Kyoto", "Osaka", "Nagoya"],
+      "correctAnswer": "Tokyo"
+    }
+  ]
+}
+}
