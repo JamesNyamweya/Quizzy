@@ -11,7 +11,7 @@ function ResultsPage({ userAnswers, subject, userName }) {
   const [postedResult, setPostedResult] = useState(null); // store result from server
 
   useEffect(() => {
-    fetch(`http://localhost:4000/questions`)
+    fetch(`http://localhost:3000/questions`)
       .then((res) => res.json())
       .then((data) => {
         if (data[subject]) {
@@ -44,7 +44,7 @@ function ResultsPage({ userAnswers, subject, userName }) {
       totalQuestions: totalMark,
     };
 
-    fetch("http://localhost:3000/scores", {
+    fetch("http://localhost:4000/scores", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
