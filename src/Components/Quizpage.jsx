@@ -1,59 +1,58 @@
 import React, { useState, useEffect } from "react";
-import ResultComponent from "./ResultComponent";
+import ResultsPage from "./ResultsPage";
 
-
-function Quizpage({ selectedSubject, userName}) {
-  const [questions, setquestions] = useState([]);
+function Quizpage({ selectedSubject = "Math", userName = "Arif" }) {
+  const [questions, setQuestions] = useState([]);
   const [userAnswers, setUserAnswers] = useState([]);
-  const [results, setResults] = useState(false);
-    // const selectedSubject = "Math";
-    // const userName= "Arif"
-const handleSubmit = () => {
-  console.log(userAnswers);
-  setResults(true);
-  console.log("Results state:", results); 
-};
+  const [showResults, setShowResults] = useState(false);
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/questions`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data[selectedSubject]) {
+          setQuestions(data[selectedSubject]);
+        } else {
+          console.error("Subject not found in database");
+        }
+      });
+  }, [selectedSubject]);
 
   const handleAnswerChange = (index, answer) => {
-      const updatedAnswers = [...userAnswers];
-      console.log(updatedAnswers)
+    const updatedAnswers = [...userAnswers];
     updatedAnswers[index] = answer;
-      setUserAnswers(updatedAnswers);
-        console.log(userAnswers);
+    setUserAnswers(updatedAnswers);
   };
-useEffect(() => {
-  fetch(`http://localhost:3000/questions`) // Fetch all questions
-    .then((res) => res.json())
-      .then((data) => {
-        console.log(data)
-        setquestions(data[selectedSubject]); // Set only the selected subject's questions
-    });
-}, [selectedSubject]);
+
+  const handleSubmit = () => {
+    setShowResults(true);
+  };
 
   return (
     <div>
       <h1>Quiz: {selectedSubject}</h1>
-      {questions.map((question, index) => (
-        <div key={question.id}>
-          <p>
-            {index + 1}.{question.text}
-          </p>
-          {question.options.map((option) => (
-            <div key={option}>
-              <input
-                type="radio"
-                name={`question-${index}`}
-                value={option}
-                onChange={() => handleAnswerChange(index, option)}
-              />
-              <label>{option}</label>
-            </div>
-          ))}
-        </div>
-      ))}
-      <button onClick={handleSubmit}>Submit Quiz</button>{" "}
-      {results && (
-        <ResultComponent
+      {!showResults &&
+        questions.map((question, index) => (
+          <div key={question.id}>
+            <p>
+              {index + 1}. {question.text}
+            </p>
+            {question.options.map((option) => (
+              <div key={option}>
+                <input
+                  type="radio"
+                  name={`question-${index}`}
+                  value={option}
+                  onChange={() => handleAnswerChange(index, option)}
+                />
+                <label>{option}</label>
+              </div>
+            ))}
+          </div>
+        ))}
+      {!showResults && <button onClick={handleSubmit}>Submit Quiz</button>}
+      {showResults && (
+        <ResultsPage
           userAnswers={userAnswers}
           subject={selectedSubject}
           userName={userName}
