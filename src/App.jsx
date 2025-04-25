@@ -1,19 +1,17 @@
-import { useState } from 'react'
+import { useState } from "react";
+import "./App.css";
+import Quizpage from "./Components/Quizpage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; 
 
-
-import './App.css'
-import Quizpage from './Components/Quizpage'
 
 function App() {
-  
-
   return (
     <>
       <Quizpage />
+      <ToastContainer />
     </>
-  )
+  );
 }
 
-export default App
-
-
+export default App;

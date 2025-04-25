@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
-function ResultComponent({ userAnswers, subject , userName }) {
+function ResultComponent({ userAnswers, subject, userName }) {
   const [score, setScore] = useState(0); // Number for total score
   const [correctAnswers, setCorrectAnswers] = useState([]); // Array for correct answers
   const [totalMark, setTotalMark] = useState(0); // Number for maximum score
@@ -9,24 +9,25 @@ function ResultComponent({ userAnswers, subject , userName }) {
     fetch(`http://localhost:3000/questions`) // Fetch all questions
       .then((res) => res.json())
       .then((data) => {
-        console.log(correctAnswers);
-setCorrectAnswers(data[subject].map((question) => question.correctAnswer));
+        setCorrectAnswers(
+          data[subject].map((question) => question.correctAnswer)
+        );
       });
   }, [subject]);
 
-useEffect(() => {
-  if (correctAnswers.length > 0 && userAnswers.length > 0) {
-    let calculatedScore = 0;
-    correctAnswers.forEach((correctAnswer, index) => {
-      if (userAnswers[index] === correctAnswer) {
-        calculatedScore++;
-      }
-    });
-    setScore(calculatedScore);
-    setTotalMark(correctAnswers.length); // Total possible marks based on the number of questions
-  }
-}, [correctAnswers, userAnswers]);
-  
+  useEffect(() => {
+    if (correctAnswers.length > 0 && userAnswers.length > 0) {
+      let calculatedScore = 0;
+      correctAnswers.forEach((correctAnswer, index) => {
+        if (userAnswers[index] === correctAnswer) {
+          calculatedScore++;
+        }
+      });
+      setScore(calculatedScore);
+      setTotalMark(correctAnswers.length); // Total possible marks based on the number of questions
+    }
+  }, [correctAnswers, userAnswers]);
+
   const postScore = () => {
     const resultData = {
       user: userName,
@@ -52,17 +53,17 @@ useEffect(() => {
       })
       .catch((error) => console.error("Error posting score:", error));
   };
-return (
-  <div>
-    <h1>Results for {subject} Quiz</h1>
-    <p>
-      Your Score: {score} / {totalMark}
-    </p>
-    <p>Percentage: {(score / totalMark) * 100}%</p>
-    <button onClick={postScore}>Save score</button>
-  </div>
-);
+
+  return (
+    <div>
+      <h1>Results for {subject} Quiz</h1>
+      <p>
+        Your Score: {score} / {totalMark}
+      </p>
+      <p>Percentage: {(score / totalMark) * 100}%</p>
+      <button onClick={postScore}>Save score</button>
+    </div>
+  );
 }
 
-export default ResultComponent
-
+export default ResultComponent;
