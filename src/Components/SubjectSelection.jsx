@@ -9,7 +9,7 @@ const SubjectSelection = ({ setSelectedSubject, setUserName }) => {
 
   const handleSubjectClick = (subject) => {
     setSelectedSubject(subject);
-    setUserName("Irene"); // You can customize or make this user input
+    setUserName("Mary Jane"); // You can customize or make this user input
     navigate("/quiz");
   };
 

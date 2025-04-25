@@ -14,7 +14,7 @@ export default function HomePage({ username }) {
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold text-center mb-8">
-        Welcome{username ? `, ${username}` : ""}! Choose a Subject to Begin
+        Think you're a genius? Prove it. Select a subject!{username ? `, ${username}` : ""}
       </h1>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -30,7 +30,7 @@ export default function HomePage({ username }) {
       </div>
 
       <footer className="mt-12 text-center text-gray-600 text-sm">
-        📘 Powered by <strong>Ultimate Quiz Zone</strong>
+        📘 Powered by <strong>Ultimate Quizzy</strong>
       </footer>
     </div>
   );

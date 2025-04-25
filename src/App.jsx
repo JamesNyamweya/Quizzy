@@ -28,7 +28,7 @@ function QuizRouteWrapper({ userName }) {
 }
 
 const App = () => {
-  const [userName] = useState("Irene");
+  const [userName] = useState();
 
   return (
     <Router>
