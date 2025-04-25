@@ -9,6 +9,7 @@ It allows users to test their knowledge across multiple subjects including:
 - **Biology**,
 - **Georgraphy**
 - **Math**.
+
 The app uses a clean, intuitive UI and stores quiz results using a mock backend powered by **JSON Server**.
 
 This app was developed by:
