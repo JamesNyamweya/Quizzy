@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ResultsPage from "./ResultsPage";
 
 function Quizpage({ selectedSubject = "Math", userName = "Arif" }) {
@@ -52,11 +53,20 @@ function Quizpage({ selectedSubject = "Math", userName = "Arif" }) {
         ))}
       {!showResults && <button onClick={handleSubmit}>Submit Quiz</button>}
       {showResults && (
-        <ResultsPage
-          userAnswers={userAnswers}
-          subject={selectedSubject}
-          userName={userName}
-        />
+        <div>
+          <ResultsPage
+            userAnswers={userAnswers}
+            subject={selectedSubject}
+            userName={userName}
+          />
+          {/* Link to navigate to Report Card */}
+          <Link
+            to="/report"
+            className="block mt-4 text-blue-500 underline hover:text-blue-700"
+          >
+            View Your Report Card
+          </Link>
+        </div>
       )}
     </div>
   );
