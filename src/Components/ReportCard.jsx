@@ -4,7 +4,7 @@ const ReportCard = () => {
   const [scores, setScores] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/scores")
+    fetch("http://localhost:4000/scores")
       .then((res) => res.json())
       .then((data) => setScores(data))
       .catch((err) => console.error("Error fetching scores:", err));
